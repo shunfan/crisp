@@ -1,0 +1,5 @@
+*,*:after,*:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a.headerlink{margin-left:8px;text-decoration:none;}
+.example{border:1px solid #cfcfcf;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}.example .result{padding:10px 10px;}.example .result:after{content:"";display:table;clear:both;}
+.example .code pre{margin:0 0;padding:0 0;border-right:none;border-bottom:none;border-left:none;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;}
+.block{padding:5px 0;text-align:center;color:#fff;text-shadow:1px 1px #b3b3b3;background-color:#d4d4d4;}.block:hover{background-color:#c7c7c7;}
