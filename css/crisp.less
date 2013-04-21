@@ -44,7 +44,7 @@
 /* Layout */
 
 #wrap {
-  max-width: 1024px;
+  max-width: 1140px;
   margin: auto;
 }
 
@@ -70,7 +70,7 @@
   float: left;
   padding-right: 20px;
   &:last-of-type {
-  padding-right: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -82,12 +82,12 @@
   padding: 20px 0 0px 20px;
   overflow: hidden;
   &:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
   }
   > [class*='col-']:last-of-type {
-  padding-right: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -176,7 +176,7 @@ body {
 a {
   color: @general;
   &:hover {
-  color: @general - 15;
+    color: @general - 15;
   }
 }
 
@@ -186,12 +186,28 @@ p {
 
 h1 {
   a {
-  text-decoration: none;
+    text-decoration: none;
   }
   small {
-  font-size: 15px;
-  margin-left: 10px;
+    font-size: 15px;
+    margin-left: 10px;
   }
+}
+
+blockquote {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  font-style: italic;
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '"';
+  }
+}
+
+ul {
+  margin: 4px 0;
 }
 
 /* Code */
@@ -218,36 +234,36 @@ button {
   background-color: @general;
   .radius(4px);
   &.alert {
-  border-bottom: 3px solid @alert - 30;
-  text-shadow: 1px 1px @alert - 30;
-  background-color: @alert;
-  &:hover {
-  background-color: @alert - 10;
-  }
+    border-bottom: 3px solid @alert - 30;
+    text-shadow: 1px 1px @alert - 30;
+    background-color: @alert;
+    &:hover {
+      background-color: @alert - 10;
+    }
   }
   &.disabled {
-  top: 3px;
-  border-bottom: none;
-  text-shadow: 1px 1px @general - 50;
-  background-color: @general - 30;
-  cursor: default;
+    top: 3px;
+    border-bottom: none;
+    text-shadow: 1px 1px @general - 50;
+    background-color: @general - 30;
+    cursor: default;
+    &:hover {
+      background-color: @general - 30;
+    }
+    &:active {
+      top: 3px;
+    }
+  }
   &:hover {
-  background-color: @general - 30;
+    background-color: @general - 10;
   }
   &:active {
-  top: 3px;
-  }
-  }
-  &:hover {
-  background-color: @general - 10;
-  }
-  &:active {
-  top: 3px;
-  margin-bottom: 8px;
-  border-bottom: none;
+    top: 3px;
+    margin-bottom: 8px;
+    border-bottom: none;
   }
   &.round {
-  .radius(24px);
+    .radius(24px);
   }
 }
 
@@ -259,35 +275,101 @@ button {
   background-color: @general;
   .radius(4px);
   ul.nav {
-  margin: 0 0;
-  padding: 0px 10px;
+    margin: 0 0;
+    padding: 0px 10px;
+    list-style: none;
+    li {
+      float: left;
+      padding: 10px 10px;
+      margin: 0 0;
+      display: inline;
+      font-size: 17px;
+      color: @contrast;
+      background-color: @general;
+      a {
+        color: @contrast;
+        text-shadow: 1px 1px @general - 30;
+        text-decoration: none;
+      }
+      &.active {
+        background-color: @general - 10;
+      }
+      &:hover {
+        background-color: @general - 10;
+      }
+      &.divider {
+        padding: 10px 0;
+        height: 43px;
+        border-left: 1px solid @general - 30;
+        border-right: 1px solid @general + 20;
+      }
+    }
+  }
+}
+
+/* Delivery */
+
+ul.breadcrumb {
+  margin: 5px 5px;
+  padding: 5px 10px;
+  list-style: none;
+  color: @contrast;
+  text-shadow: 0 1px @general;
+  box-shadow: inset 1px 1px 2px 2px @general;
+  background: @general + 30;
+  .radius(4px);
+  li {
+    display: inline;
+    span {
+      margin: 0 4px;
+    }
+  }
+  a {
+    color: @general - 50;
+    text-shadow: 0 1px @contrast;
+    text-decoration: none;
+  }
+}
+
+ul.pagination {
+  margin: 5px 5px;
+  padding: 0 0;
   list-style: none;
   li {
-  float: left;
-  padding: 10px 10px;
-  margin: 0 0;
-  display: inline;
-  font-size: 17px;
-  color: @contrast;
-  background-color: @general;
-  a {
-  color: @contrast;
-  text-shadow: 1px 1px @general - 30;
-  text-decoration: none;
-  }
-  &.active {
-  background-color: @general - 10;
-  }
-  &:hover {
-  background-color: @general - 10;
-  }
-  &.divider {
-  padding: 10px 0;
-  height: 43px;
-  border-left: 1px solid @general - 30;
-  border-right: 1px solid @general + 20;
-  }
-  }
+    position: relative;
+    float: left;
+    display: inline;
+    padding: 0 0;
+    &:first-child {
+      a {
+        .left-radius(4px);
+      }
+    }
+    &:last-child {
+      a {
+        .right-radius(4px);
+      }
+    }
+    &:active {
+      top: 3px;
+    }
+    a {
+      display: block;
+      padding: 5px 10px;
+      color: @contrast;
+      text-decoration: none;
+      text-shadow: 1px 1px @general - 30;
+      border-bottom: 3px solid @general - 30;
+      background: @general + 10;
+      &:hover {
+        background: @general - 10;
+      }
+      &:active {
+        background: @general + 10;
+        border-bottom: none;
+        box-shadow: inset 1px 1px 2px 1px @general - 30;
+      }
+    }
   }
 }
 
@@ -307,23 +389,23 @@ button {
 @media (max-width: 767px) {
 
   .grid {
-  width: 100%;
-  min-width: 0;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+    width: 100%;
+    min-width: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   [class*='col-'] {
-  width: auto;
-  float: none;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+    width: auto;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
 }
