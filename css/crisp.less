@@ -377,7 +377,7 @@ ul.pagination {
 /* Message */
 
 .message {
-  margin: 5px 5px;
+  margin: 10px 5px;
   padding: 8px 10px;
   color: @general;
   border: 2px solid @general;
@@ -385,11 +385,25 @@ ul.pagination {
 }
 
 .alert-message {
-  margin: 5px 5px;
+  margin: 10px 5px;
   padding: 8px 10px;
   color: @alert;
   border: 2px solid @alert;
   .radius(4px);
+}
+
+.huge-message {
+  margin: 10px 5px;
+  padding: 2px 20px;
+  color: @contrast;
+  text-shadow: 1px 1px @general - 30;
+  box-shadow: inset 2px 2px 5px 2px @general - 20;
+  background-color: @general;
+  .radius(4px);
+  .title {
+    margin: 14px 0px;
+    font-size: 28px;
+  }
 }
 
 /* Responsive */
