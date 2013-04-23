@@ -11,6 +11,11 @@
     <body>
         <div id="header">
             <h1><a href="index.html">Crisp</a></h1>
+            <div id="github">Github</div>
+            <div id="github-buttons">
+                <iframe src="http://ghbtns.com/github-btn.html?user=Perrydu&repo=crisp&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+            </div>
             <div class="navbar">
                 <ul class="nav">
                     <li><a href="index.html">Home</a></li>
@@ -172,6 +177,9 @@
         <script>
         $("#header h1 a").hover(function(){
             $(this).css('letter-spacing', '10px');
+        });
+        $("#github").click(function() {
+            $("#github-buttons").fadeToggle("slow", "swing");
         });
         </script>
         <script src="js/prettify.js"></script>
