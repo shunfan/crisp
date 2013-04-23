@@ -982,7 +982,7 @@ ul.pagination li a:active {
   transition: all 0.3s ease;
 }
 #header .navbar {
-  width: 1140px;
+  max-width: 1140px;
   margin: 20px auto;
   background-color: #81bcd5;
   -webkit-border-radius: 4px 4px 0 0;
