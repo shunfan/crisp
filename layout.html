@@ -5,28 +5,27 @@
         <title>Crisp</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/crisp.css">
-        <link rel="stylesheet" href="css/example.css">
-        <link rel="stylesheet" href="css/prettify.css">
+        <script src="js/jquery-2.0.0.min.js"></script>
     </head>
     <body>
+        <div id="header">
+            <h1><a href="index.html">Crisp</a></h1>
+            <div class="navbar">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="divider"></li>
+                    <li class="active"><a href="layout.html">Layout</a></li>
+                    <li class="divider"></li>
+                    <li><a href="base.html">Base</a></li>
+                    <li class="divider"></li>
+                    <li><a href="component.html">Component</a></li>
+                </ul>
+            </div>
+        </div>
         <div id="wrap">
             <div class="grid">
                 <div class="col-1-1">
-                    <h1><a href="index.html">Crisp</a><small>It's easily crumbled.</small></h1></a>
-                    <div class="navbar">
-                        <ul class="nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="divider"></li>
-                            <li class="active"><a href="layout.html">Layout</a></li>
-                            <li class="divider"></li>
-                            <li><a href="base.html">Base</a></li>
-                            <li class="divider"></li>
-                            <li><a href="component.html">Component</a></li>
-                        </ul>
-                    </div>
                     <div id="grid-system">
                         <h2>Grid System<a class="headerlink" href="#grid-system" title="Permalink to this headline">¶</a></h2>
                         <div class="example">
@@ -273,6 +272,12 @@
                 </div>
             </div>
         </div>
+        <link href='http://fonts.googleapis.com/css?family=Lobster|Kreon:300,400' rel='stylesheet' type='text/css'>
+        <script>
+        $("#header h1 a").hover(function(){
+            $(this).css('letter-spacing', '10px');
+        });
+        </script>
         <script src="js/prettify.js"></script>
         <script>prettyPrint();</script>
     </body>

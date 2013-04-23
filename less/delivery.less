@@ -1,0 +1,63 @@
+ul.breadcrumb {
+  margin: 5px 5px;
+  padding: 5px 10px;
+  list-style: none;
+  color: @contrast;
+  text-shadow: 0 1px @general;
+  box-shadow: inset 1px 1px 2px 2px @general;
+  background: @general + 30;
+  .radius(4px);
+  li {
+    display: inline;
+    span {
+      margin: 0 4px;
+    }
+  }
+  a {
+    color: @general - 50;
+    text-shadow: 0 1px @contrast;
+    text-decoration: none;
+  }
+}
+
+ul.pagination {
+  margin: 5px 5px;
+  padding: 0 0;
+  list-style: none;
+  li {
+    position: relative;
+    float: left;
+    display: inline;
+    padding: 0 0;
+    &:first-child {
+      a {
+        .radius-left(4px);
+      }
+    }
+    &:last-child {
+      a {
+        .radius-right(4px);
+      }
+    }
+    &:active {
+      top: 3px;
+    }
+    a {
+      display: block;
+      padding: 5px 10px;
+      color: @contrast;
+      text-decoration: none;
+      text-shadow: 1px 1px @general - 30;
+      border-bottom: 3px solid @general - 30;
+      background: @general + 10;
+      &:hover {
+        background: @general - 10;
+      }
+      &:active {
+        background: @general + 10;
+        border-bottom: none;
+        box-shadow: inset 1px 1px 2px 1px @general - 30;
+      }
+    }
+  }
+}

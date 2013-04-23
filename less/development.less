@@ -1,0 +1,126 @@
+/*!
+ * Development Layout
+ */
+
+#header {
+  background-color: @general - 20;
+  h1 {
+    color: @contrast;
+    margin: 0 10px;
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Kreon', serif;
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow: 1px 1px @general - 50;
+    a {
+      color: @contrast;
+      text-decoration: none;
+      font-weight: 300;
+      &:hover {
+        color: @contrast;
+        text-shadow: 1px 1px @general - 50;
+        .ease(0.3s);
+      }
+    }
+  }
+  .navbar {
+    background-color: @general;
+    margin: 20px 0;
+    width: 1140px;
+    margin: auto;
+    .radius-disbottom(4px);
+  }
+}
+
+#wrap {
+  max-width: 1140px;
+  margin: auto;
+}
+
+#footer {
+  margin-top: 30px;
+  padding: 20px 20px 40px 20px;
+  color: @contrast;
+  background-color: @general;
+}
+
+/*!
+ * Examples
+ */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a.headerlink {
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.example {
+  border: 1px solid #cfcfcf;
+  .radius(4px);
+  .result {
+    padding: 10px 10px;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .code {
+    pre {
+      margin: 0 0;
+      padding: 0 0;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+      .radius-distop(4px);
+    }
+  }
+}
+
+.block {
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px #c7c7c7 - 20;
+  background-color: #d4d4d4;
+  &:hover {
+    background-color: #c7c7c7;
+  }
+}
+
+/*!
+ * prettify
+ */
+
+.com { color: #93a1a1; }
+.lit { color: #195f91; }
+.pun, .opn, .clo { color: #93a1a1; }
+.fun { color: #dc322f; }
+.str, .atv { color: #D14; }
+.kwd, .prettyprint .tag { color: #1e347b; }
+.typ, .atn, .dec, .var { color: teal; }
+.pln { color: #48484c; }
+
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+
+ol.linenums {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0 0 0 10px;
+}
+ol.linenums li {
+  padding-left: 5px;
+  color: #bebec5;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #fff;
+}
