@@ -1,9 +1,3 @@
-<script type="text/javascript">
-    less = {
-        rootpath: ":/perry.asia/crisp/"
-    };
-</script>
-
 $("#header h1 a").hover(function(){
     $(this).css('letter-spacing', '10px');
 });
