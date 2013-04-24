@@ -1,0 +1,41 @@
+.navbar {
+  margin: 5px 0;
+  height: 43px;
+  background-color: @general;
+  .radius(4px);
+  ul.nav {
+    margin: 0 0;
+    padding: 0 12px;
+    list-style: none;
+    li {
+      float: left;
+      margin: 0 0;
+      display: inline;
+      font-size: 17px;
+      color: @contrast;
+      background-color: @general;
+      a {
+        display: block;
+        padding: 10px 10px;
+        color: @contrast;
+        text-shadow: 1px 1px @general - 30;
+        text-decoration: none;
+      }
+      &.active {
+        background-color: @general - 10;
+      }
+      &:hover {
+        background-color: @general - 10;
+      }
+      &.divider {
+        padding: 10px 0;
+        height: 43px;
+        border-left: 1px solid @general - 30;
+        border-right: 1px solid @general + 20;
+      }
+      &.right {
+        float: right;
+      }
+    }
+  }
+}
