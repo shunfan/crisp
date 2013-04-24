@@ -5,7 +5,9 @@
         <title>Crisp</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/crisp.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Kreon:300,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet/less" type="text/css" href="less/crisp.less" />
+        <script src="js/less-1.3.3.min.js"></script>
         <script src="js/jquery-2.0.0.min.js"></script>
     </head>
     <body>
@@ -25,21 +27,25 @@
                     <li><a href="base.html">Base</a></li>
                     <li class="divider"></li>
                     <li><a href="component.html">Component</a></li>
+                    <li id="random" class="right"><a>Magic Time</a></li>
                 </ul>
             </div>
         </div>
         <div id="wrap">
             <div class="grid">
                 <div class="col-1-1">
+                    <div class="alert-message">
+                        <strong>^ - ^</strong> Crisp is just under construction!
+                    </div>
                     <h1>Crisp is easily crumbled.</h1>
-                    <h2>Why Crisp?<a class="headerlink" href="#why-crisp" title="Permalink to this headline">¶</a></h2>
-                    <p>Crisp is designed for coders who don't have time to build up a new stylesheet for a website. It's easy to handle, you could choose your favorite color and just download the customize stylesheet, all your work is coding your shit.</p>
+                    <h2>Why Crisp?</h2>
+                    <p>Crisp is designed for coders who are lack of time to build up a new stylesheet for a website. It's easy to handle, you could choose your favorite color and just download the customize stylesheet, all your work is coding your poem.</p>
                     <h2>What does it dedicate?</h2>
                     <p>To make up laconic stylesheet and web pages easily and orderly.</p>
                     <h2>Free to use?</h2>
                     <p>Definitely! Whether you are a freelance coder or a company, just use it.</p>
                     <h2>Browser support</h2>
-                    <p>It's acceptable in all modern browsers, but it's awful in IE8-.</p>
+                    <p>It's only acceptable in all up-to-date modern browsers, but it's awful in IE8-, so don't use it in production.</p>
                     <h2>Time to contribute</h2>
                     <p>Contribute in github</p>
                 </div>
@@ -48,19 +54,12 @@
         <div id="footer">
             <div class="grid">
                 <div class="col-1-1">
-                    Designed by Perry.
+                    <div class="sans">Crisp is a 16-year-old student's fancy.</div>
+                    <div class="sans">Proudly designed by <a href="http://perry.asia/">Perry</a>.</div>
                 </div>
             </div>
         </div>
-        <link href='http://fonts.googleapis.com/css?family=Lobster|Kreon:300,400' rel='stylesheet' type='text/css'>
-        <script>
-        $("#header h1 a").hover(function(){
-            $(this).css('letter-spacing', '10px');
-        });
-        $("#github").click(function() {
-            $("#github-buttons").fadeToggle("slow", "swing");
-        });
-        </script>
+        <script src="js/main.js"></script>
         <script src="js/prettify.js"></script>
         <script>prettyPrint();</script>
     </body>

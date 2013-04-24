@@ -5,7 +5,9 @@
         <title>Crisp</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/crisp.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Kreon:300,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet/less" type="text/css" href="less/crisp.less" />
+        <script src="js/less-1.3.3.min.js"></script>
         <script src="js/jquery-2.0.0.min.js"></script>
     </head>
     <body>
@@ -25,6 +27,7 @@
                     <li><a href="base.html">Base</a></li>
                     <li class="divider"></li>
                     <li><a href="component.html">Component</a></li>
+                    <li id="random" class="right"><a>Magic Time</a></li>
                 </ul>
             </div>
         </div>
@@ -273,19 +276,13 @@
         <div id="footer">
             <div class="grid">
                 <div class="col-1-1">
-                    Designed by Perry.
+                    <div class="sans">Crisp is a 16-year-old student's fancy.</div>
+                    <div class="sans">Proudly designed by <a href="http://perry.asia/">Perry</a>.</div>
                 </div>
             </div>
         </div>
         <link href='http://fonts.googleapis.com/css?family=Lobster|Kreon:300,400' rel='stylesheet' type='text/css'>
-        <script>
-        $("#header h1 a").hover(function(){
-            $(this).css('letter-spacing', '10px');
-        });
-        $("#github").click(function() {
-            $("#github-buttons").fadeToggle("slow", "swing");
-        });
-        </script>
+        <script src="js/main.js"></script>
         <script src="js/prettify.js"></script>
         <script>prettyPrint();</script>
     </body>
