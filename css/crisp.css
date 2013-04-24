@@ -824,7 +824,7 @@ button.round {
   border-right: 1px solid #7ebbe1;
 }
 .navbar ul.nav li.right {
-  color: #333;
+  float: right;
 }
 ul.breadcrumb {
   margin: 5px 5px;
@@ -967,7 +967,7 @@ ul.pagination li a:active {
   margin: 0 10px;
   padding: 30px 0 0 0;
   text-align: center;
-  font-family: 'Kreon', serif;
+  font-family: "Kreon", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 60px;
   font-weight: 400;
   text-shadow: 1px 1px #38759b;
@@ -1016,6 +1016,9 @@ ul.pagination li a:active {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+#header #random {
+  cursor: pointer;
+}
 #wrap {
   max-width: 1140px;
   margin: auto;
@@ -1025,6 +1028,18 @@ ul.pagination li a:active {
   padding: 20px 20px 40px 20px;
   color: #ffffff;
   background-color: #6aa7cd;
+}
+.sans {
+  font-size: 27px;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 2px dotted #ffffff;
+}
+#footer a:hover {
+  border: none;
 }
 /*!
  * Examples
