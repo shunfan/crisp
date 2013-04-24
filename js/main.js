@@ -6,6 +6,12 @@ $("#github").click(function() {
     $("#github-buttons").fadeToggle("slow", "swing");
 });
 
+<script type="text/javascript">
+    less = {
+        relativeUrls: true,
+    };
+</script>
+
 $("#random").click(function() {
     var hue = 'rgb('
                 + (Math.floor(Math.random() * 256)) + ','
