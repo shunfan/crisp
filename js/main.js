@@ -9,6 +9,7 @@ $("#github").click(function() {
 <script type="text/javascript">
     less = {
         relativeUrls: true,
+        rootpath: ":/perry.asia/crisp/"
     };
 </script>
 
