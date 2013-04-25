@@ -1,12 +1,12 @@
 ul.breadcrumb {
-  margin: 5px 5px;
-  padding: 5px 10px;
+  margin: @marginSmall;
+  padding: @paddingMedium;
   list-style: none;
   color: @contrast;
   text-shadow: 0 1px @general;
-  box-shadow: inset 1px 1px 2px 2px @general;
+  .radius(@baseRadius);
+  .box-shadow(inset 1px 1px 2px 2px @general);
   background: @general + 30;
-  .radius(4px);
   li {
     display: inline;
     span {
@@ -21,7 +21,7 @@ ul.breadcrumb {
 }
 
 ul.pagination {
-  margin: 5px 5px;
+  margin: @marginSmall;
   padding: 0 0;
   list-style: none;
   li {
@@ -31,12 +31,12 @@ ul.pagination {
     padding: 0 0;
     &:first-child {
       a {
-        .radius-left(4px);
+        .radius-left(@baseRadius);
       }
     }
     &:last-child {
       a {
-        .radius-right(4px);
+        .radius-right(@baseRadius);
       }
     }
     &:active {
@@ -44,19 +44,19 @@ ul.pagination {
     }
     a {
       display: block;
-      padding: 5px 10px;
+      padding: @paddingMedium;
       color: @contrast;
-      text-decoration: none;
       text-shadow: 1px 1px @general - 30;
+      text-decoration: none;
       border-bottom: 3px solid @general - 30;
       background: @general + 10;
       &:hover {
         background: @general - 10;
       }
       &:active {
-        background: @general + 10;
         border-bottom: none;
-        box-shadow: inset 1px 1px 2px 1px @general - 30;
+        .box-shadow(inset 1px 1px 2px 1px @general - 30);
+        background: @general + 10;
       }
     }
   }
