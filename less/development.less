@@ -1,6 +1,5 @@
-/*!
- * Development Layout
- */
+// Development style
+// -----------------
 
 #header {
   background-color: @general - 20;
@@ -9,14 +8,15 @@
     margin: 0 10px;
     padding: 30px 0 0 0;
     text-align: center;
-    font-family: "Kreon", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "Kreon", @sansFontFamily;
     font-size: 60px;
     font-weight: 400;
+    line-height: 80px;
     text-shadow: 1px 1px @general - 50;
     a {
       color: @contrast;
-      text-decoration: none;
       font-weight: 300;
+      text-decoration: none;
       &:hover {
         color: @contrast;
         text-shadow: 1px 1px @general - 50;
@@ -28,17 +28,18 @@
     max-width: 1140px;
     margin: 20px auto;
     background-color: @general;
-    .radius-top(4px);
+    .radius-top(@baseRadius);
+    .radius-bottom(0);
   }
   #github {
     width: 60px;
     margin: 10px auto;
     text-align: center;
     color: @general;
-    box-shadow: inset 1px 1px 2px 1px @general - 70;
+    .box-shadow(inset 1px 1px 2px 1px @general - 70);
     background-color: @general - 50;
     cursor: pointer;
-    .radius(4px);
+    .radius(@baseRadius);
   }
   #github-buttons {
     display: none;
@@ -48,7 +49,7 @@
     padding: 10px;
     box-shadow: inset 1px 1px 2px 1px @general - 70;
     background-color: @general - 50;
-    .radius(4px);
+    .radius(@baseRadius);
   }
   #random {
     cursor: pointer;
@@ -83,15 +84,8 @@
   }
 }
 
-/*!
- * Examples
- */
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+// Examples
+// --------
 
 a.headerlink {
   margin-left: 8px;
@@ -100,9 +94,9 @@ a.headerlink {
 
 .example {
   border: 1px solid #cfcfcf;
-  .radius(4px);
+  .radius(@baseRadius);
   .result {
-    padding: 10px 10px;
+    padding: @paddingMedium;
     &:after {
       content: "";
       display: table;
@@ -116,7 +110,8 @@ a.headerlink {
       border-right: none;
       border-bottom: none;
       border-left: none;
-      .radius-bottom(4px);
+      .radius-top(0);
+      .radius-bottom(@baseRadius);
     }
   }
 }
@@ -132,9 +127,8 @@ a.headerlink {
   }
 }
 
-/*!
- * prettify
- */
+// prettify
+// --------
 
 .com { color: #93a1a1; }
 .lit { color: #195f91; }

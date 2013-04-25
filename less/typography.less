@@ -1,0 +1,62 @@
+// Typography
+// ----------
+
+body {
+  font-size: @baseFontSize;
+}
+
+::selection {
+  color: @contrast;
+  background: @general - 30;
+  text-shadow: none;
+}
+
+p {
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @sansFontFamily;
+}
+
+h1 { font-size: @baseFontSize * 2.2; line-height: @baseLineHeight * 1.4; }
+h2 { font-size: @baseFontSize * 1.7; line-height: @baseLineHeight * 1.3; }
+h3 { font-size: @baseFontSize * 1.5; line-height: @baseLineHeight * 1.2; }
+h4 { font-size: @baseFontSize * 1.3; line-height: @baseLineHeight * 0.4; }
+h5 { font-size: @baseFontSize * 1.0; line-height: @baseLineHeight * 0.3; }
+h6 { font-size: @baseFontSize * 0.8; line-height: @baseLineHeight * 0.2; }
+
+a {
+  color: @general;
+  &:hover {
+    color: @general - 15;
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  font-family: @serifFontFamily;
+  font-size: 18px;
+  font-style: italic;
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '"';
+  }
+}
+
+ul {
+  margin: 4px 0;
+}
+
+pre {
+  padding: @paddingLarge;
+  border: 1px solid #cfcfcf;
+  background-color: #F5F5F5;
+  .radius(4px);
+  code {
+    font-family: @monoFontFamily;
+  }
+}
