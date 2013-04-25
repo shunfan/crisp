@@ -27,30 +27,33 @@
       -moz-border-radius-topleft: @radius;
           border-top-left-radius: @radius;
 }
+
 .radius-top-right(@radius) {
   -webkit-border-top-right-radius: @radius;
       -moz-border-radius-topright: @radius;
           border-top-right-radius: @radius;
 }
-.radius-bottom-right(@radius) {
-  -webkit-border-bottom-right-radius: @radius;
-      -moz-border-radius-bottomright: @radius;
-          border-bottom-right-radius: @radius;
-}
+
 .radius-bottom-left(@radius) {
   -webkit-border-bottom-left-radius: @radius;
       -moz-border-radius-bottomleft: @radius;
           border-bottom-left-radius: @radius;
 }
 
+.radius-bottom-right(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+
 .radius-top(@radius) {
-  .radius-top-right(@radius);
   .radius-top-left(@radius);
+  .radius-top-right(@radius);
 }
 
 .radius-bottom(@radius) {
-  .radius-bottom-right(@radius);
   .radius-bottom-left(@radius);
+  .radius-bottom-right(@radius);
 }
 
 .radius-left(@radius) {
