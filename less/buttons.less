@@ -1,18 +1,21 @@
+// Buttons
+// -------
+
 button {
   position: relative;
-  margin: 5px;
-  padding: 8px 12px;
+  margin: @marginSmall;
+  padding: @paddingMedium;
+  color: @contrast;
+  text-shadow: 1px 1px @general - 30;
   border-top: none;
   border-right: none;
   border-bottom: 3px solid @general - 30;
   border-left: none;
-  color: @contrast;
-  text-shadow: 1px 1px @general - 30;
+  .radius(@baseRadius);
   background-color: @general;
-  .radius(4px);
   &.alert {
-    border-bottom: 3px solid @alert - 30;
     text-shadow: 1px 1px @alert - 30;
+    border-bottom: 3px solid @alert - 30;
     background-color: @alert;
     &:hover {
       background-color: @alert - 10;
@@ -20,8 +23,8 @@ button {
   }
   &.disabled {
     top: 3px;
-    border-bottom: none;
     text-shadow: 1px 1px @general - 50;
+    border-bottom: none;
     background-color: @general - 30;
     cursor: default;
     &:hover {
@@ -40,6 +43,6 @@ button {
     border-bottom: none;
   }
   &.round {
-    .radius(24px);
+    .radius(@roundRadius);
   }
 }

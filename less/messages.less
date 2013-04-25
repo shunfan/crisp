@@ -1,27 +1,30 @@
+// Message
+// -------
+
 .message {
-  margin: 10px 5px;
-  padding: 8px 10px;
+  margin: @marginSmall;
+  padding: @paddingMedium;
   color: @general;
   border: 2px solid @general;
-  .radius(4px);
+  .radius(@baseRadius);
 }
 
 .alert-message {
-  margin: 10px 5px;
-  padding: 8px 10px;
+  margin: @marginSmall;
+  padding: @paddingMedium;
   color: @alert;
   border: 2px solid @alert;
-  .radius(4px);
+  .radius(@baseRadius);
 }
 
 .huge-message {
-  margin: 10px 5px;
-  padding: 2px 20px;
+  margin: @marginSmall;
+  padding: @paddingLarge;
   color: @contrast;
   text-shadow: 1px 1px @general - 30;
-  box-shadow: inset 2px 2px 5px 2px @general - 20;
+  .box-shadow(inset 2px 2px 5px 2px @general - 20);
   background-color: @general;
-  .radius(4px);
+  .radius(@baseRadius);
   .title {
     margin: 14px 0px;
     font-size: 28px;
