@@ -20,7 +20,7 @@
       &:hover {
         color: @contrast;
         text-shadow: 1px 1px @general - 50;
-        .ease(0.3s);
+        .transition(all 0.3s ease);
       }
     }
   }
@@ -28,7 +28,7 @@
     max-width: 1140px;
     margin: 20px auto;
     background-color: @general;
-    .radius-disbottom(4px);
+    .radius-top(4px);
   }
   #github {
     width: 60px;
@@ -116,7 +116,7 @@ a.headerlink {
       border-right: none;
       border-bottom: none;
       border-left: none;
-      .radius-distop(4px);
+      .radius-bottom(4px);
     }
   }
 }
