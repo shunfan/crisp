@@ -12,14 +12,13 @@
     font-size: 60px;
     font-weight: 400;
     line-height: 80px;
-    text-shadow: 1px 1px @general - 50;
+    text-shadow: 1px 2px @general - 50;
     a {
       color: @contrast;
       font-weight: 300;
       text-decoration: none;
       &:hover {
         color: @contrast;
-        text-shadow: 1px 1px @general - 50;
         .transition(all 0.3s ease);
       }
     }
@@ -30,6 +29,9 @@
     background-color: @general;
     .radius-top(@baseRadius);
     .radius-bottom(0);
+    #random {
+      cursor: pointer;
+    }
   }
   #github {
     width: 60px;
@@ -51,8 +53,15 @@
     background-color: @general - 50;
     .radius(@baseRadius);
   }
-  #random {
-    cursor: pointer;
+  #hero {
+    max-width: 900px;
+    margin: 30px auto;
+    font-size: 30px;
+    color: @contrast;
+    text-align: center;
+    font-family: "Kreon", @sansFontFamily;
+    font-weight: 300;
+    text-shadow: 1px 2px @general - 50;
   }
 }
 
