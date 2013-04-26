@@ -1,6 +1,8 @@
 // Navbar
 // ------
 
+// General navbar
+// --------------
 .navbar {
   height: 45px;
   margin: 5px 0;
@@ -12,7 +14,6 @@
     list-style: none;
     li {
       float: left;
-      display: inline;
       margin: 0 0;
       font-size: 17px;
       color: @contrast;
@@ -25,7 +26,8 @@
         text-decoration: none;
       }
       &.active {
-        background-color: @general - 10;
+        .box-shadow(inset 1px 1px 3px @general - 50);
+        background-color: @general - 20;
       }
       &:hover {
         background-color: @general - 10;
@@ -33,12 +35,66 @@
       &.divider {
         height: 45px;
         padding: 10px 0;
-        border-left: 1px solid @general - 30;
         border-right: 1px solid @general + 20;
+        border-left: 1px solid @general - 20;
       }
       &.right {
         float: right;
       }
     }
   }
+}
+
+// Container navbar
+// ----------------
+.container {
+  .container-navbar {
+    height: 38px;
+    ul {
+      margin: 0 0;
+      padding: 0 0;
+      list-style: none;
+      li {
+        margin: 0 0;
+        font-size: 17px;
+        float: left;
+        a {
+          display: block;
+          padding: @paddingMedium;
+          color: @general;
+          text-decoration: none;
+        }
+        &:first-child {
+          .radius-top-left(@baseRadius);
+        }
+        &:hover {
+          a {
+            color: @contrast;
+          }
+          background-color: @general;
+        }
+      }
+    }
+    border-bottom: 1px solid @gray;
+  }
+ &.reverse {
+  .container-navbar {
+    ul {
+      li {
+        a {
+          color: @contrast;
+          text-decoration: none;
+        }
+        &:hover {
+          a {
+            color: @contrast;
+          }
+          background-color: @general - 30;
+          .box-shadow(inset 2px 2px 2px @general - 50);
+        }
+      }
+    }
+    border-bottom: 1px solid @contrast;
+  }
+ }
 }
