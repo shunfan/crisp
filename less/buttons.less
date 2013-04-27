@@ -1,6 +1,8 @@
 // Buttons
 // -------
 
+// General buttons
+// ---------------
 button {
   position: relative;
   margin: @marginSmall;
@@ -44,5 +46,65 @@ button {
   }
   &.round {
     .radius(@roundRadius);
+  }
+}
+
+// Dropdown
+// --------
+.dropdown {
+  display: table;
+  position: relative;
+  margin: @marginSmall;
+  button {
+    margin: 0;
+    .radius-right(0);
+    &.drop {
+      position: relative;
+      left: 0px;
+      .radius-left(0);
+      .radius-right(@baseRadius);
+      &:before {
+        content: "+";
+      }
+    }
+  }
+  ul.down {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 120%;
+    padding: 0;
+    list-style: none;
+    background-color: @general;
+    .radius(@baseRadius);
+    li {
+      a {
+        display: block;
+        padding: @paddingMedium;
+        color: @contrast;
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: @general - 30;
+      }
+      &:first-child {
+        &:hover {
+          .radius-top(@baseRadius);
+        }
+      }
+      &:last-child {
+        &:hover {
+          .radius-bottom(@baseRadius);
+        }
+      }
+    }
+    &:before {
+      position: absolute;
+      top: -11px;
+      right: 11px;
+      color: @general;
+      font-size: 12px;
+      content: "▲";
+    }
   }
 }

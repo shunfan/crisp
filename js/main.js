@@ -15,3 +15,7 @@ $("#random").click(function() {
         '@general': hue,
     });
 });
+
+$(".dropdown .drop").click(function() {
+    $(".down").fadeToggle(100, "swing");
+});
